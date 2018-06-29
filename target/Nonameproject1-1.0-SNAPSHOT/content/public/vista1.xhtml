@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body>
+        <h:outputLabel for="name" value="Un: #{vista1MB.saludo}" />
+        <h:form id="frm">
+            <p:growl id="growl" life="2000"/>
+            <p:dataTable id="dt" var="hostsVw" value="#{vista1MB.hosts}">
+                <f:facet name="header">Listado de Hosts 3</f:facet>
+                <p:column headerText="NOMBRE DEL HOST" resizable="true">
+                    <h:outputText value="#{hostsVw.nomb_host}"/>
+                </p:column>
+                <p:column headerText="ACTIVO" resizable="true">
+                    <h:outputText value="#{hostsVw.actv_host}"/>
+                </p:column>
+                <p:column headerText="CLAVE HOST" resizable="true">
+                    <h:outputText value="#{hostsVw.cve_host}"/>
+                </p:column>
+                <p:column headerText="ESTATUS" resizable="true">
+                    <h:outputText value="#{hostsVw.estatus_host}"/>
+                </p:column>
+                <p:column headerText="KEY HOST" resizable="true">
+                    <h:outputText value="#{hostsVw.key_host}"/>
+                </p:column>
+            </p:dataTable>
+            
+        </h:form>
+    </h:body>
+</html>
